@@ -1,10 +1,12 @@
 {
-  "name": "@starter/web",
+  "name": "@starter/create-repo",
   "version": "0.1.0",
   "private": true,
   "type": "module",
+  "bin": {
+    "create-ai-coding-polyglot-repo": "./src/main.ts"
+  },
   "scripts": {
-    "build": "node src/main.ts > ../../.dev/web/index.html",
     "test": "node --test test/*.test.ts"
   }
 }

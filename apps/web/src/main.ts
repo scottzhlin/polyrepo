@@ -1,15 +1,15 @@
-import { createHealthPayload, escapeHTML } from "../../../packages/shared/src/index.js";
+import { createPlatformPayload, escapeHTML } from "../../../packages/shared/src/index.ts";
 
-export function renderApp(options = {}) {
-  const appName = options.appName || process.env.PUBLIC_APP_NAME || "Agentic Polyglot Starter";
-  const payload = createHealthPayload("web");
+export function renderWebApp(options: { appName?: string } = {}): string {
+  const appName = options.appName || process.env.PUBLIC_APP_NAME || "AI Coding Polyglot Monorepo Template";
+  const payload = createPlatformPayload("web", "desktop web shell");
 
   return `<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>${escapeHTML(appName)}</title>
+    <title>${escapeHTML(appName)} Web</title>
     <style>
       body { font-family: system-ui, sans-serif; margin: 3rem; line-height: 1.5; }
       main { max-width: 760px; }
@@ -18,8 +18,8 @@ export function renderApp(options = {}) {
   </head>
   <body>
     <main>
-      <h1>${escapeHTML(appName)}</h1>
-      <p>This dependency-free sample proves the workspace can share code across packages.</p>
+      <h1>${escapeHTML(appName)} Web</h1>
+      <p>This TypeScript sample proves the workspace can share typed code across web targets.</p>
       <pre><code>${escapeHTML(JSON.stringify(payload, null, 2))}</code></pre>
     </main>
   </body>
@@ -28,5 +28,5 @@ export function renderApp(options = {}) {
 }
 
 if (import.meta.url === `file://${process.argv[1]}`) {
-  process.stdout.write(renderApp());
+  process.stdout.write(renderWebApp());
 }

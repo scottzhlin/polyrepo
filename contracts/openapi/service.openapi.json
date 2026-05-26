@@ -1,7 +1,7 @@
 {
   "openapi": "3.1.0",
   "info": {
-    "title": "Agentic Polyglot Starter API",
+    "title": "AI Coding Polyglot Monorepo Template API",
     "version": "0.1.0"
   },
   "paths": {
@@ -39,6 +39,52 @@
                   "required": ["service", "version", "time"],
                   "properties": {
                     "service": { "type": "string" },
+                    "version": { "type": "string" },
+                    "time": { "type": "string", "format": "date-time" }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/admin/healthz": {
+      "get": {
+        "summary": "Admin health check",
+        "responses": {
+          "200": {
+            "description": "Admin service is healthy",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": ["status", "surface"],
+                  "properties": {
+                    "status": { "type": "string", "const": "ok" },
+                    "surface": { "type": "string", "const": "admin" }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/admin/v1/meta": {
+      "get": {
+        "summary": "Admin service metadata",
+        "responses": {
+          "200": {
+            "description": "Admin service metadata",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": ["service", "surface", "version", "time"],
+                  "properties": {
+                    "service": { "type": "string" },
+                    "surface": { "type": "string", "const": "admin" },
                     "version": { "type": "string" },
                     "time": { "type": "string", "format": "date-time" }
                   }

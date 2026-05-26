@@ -10,22 +10,22 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/your-org/ai-coding-polyglot-monorepo-template/services/api"
+	"github.com/your-org/ai-coding-polyglot-monorepo-template/services/adminapi"
 )
 
 func main() {
-	addr := getenv("HTTP_ADDR", ":8080")
-	serviceName := getenv("SERVICE_NAME", "ai-coding-polyglot-monorepo-template")
+	addr := getenv("ADMIN_HTTP_ADDR", ":8081")
+	serviceName := getenv("ADMIN_SERVICE_NAME", "admin-api")
 
 	server := &http.Server{
 		Addr:              addr,
-		Handler:           api.NewHandler(api.Config{ServiceName: serviceName}),
+		Handler:           adminapi.NewHandler(adminapi.Config{ServiceName: serviceName}),
 		ReadHeaderTimeout: 5 * time.Second,
 	}
 
 	errs := make(chan error, 1)
 	go func() {
-		slog.Info("api listening", "addr", addr)
+		slog.Info("admin api listening", "addr", addr)
 		errs <- server.ListenAndServe()
 	}()
 
@@ -37,12 +37,12 @@ func main() {
 		shutdownCtx, cancel := context.WithTimeout(context.Background(), 5*time.Second)
 		defer cancel()
 		if err := server.Shutdown(shutdownCtx); err != nil {
-			slog.Error("api shutdown failed", "error", err)
+			slog.Error("admin api shutdown failed", "error", err)
 			os.Exit(1)
 		}
 	case err := <-errs:
 		if !errors.Is(err, http.ErrServerClosed) {
-			slog.Error("api exited", "error", err)
+			slog.Error("admin api exited", "error", err)
 			os.Exit(1)
 		}
 	}

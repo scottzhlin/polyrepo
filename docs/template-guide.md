@@ -27,8 +27,9 @@ Replace starter content with product-specific truth:
 The starter ships with:
 
 - Go API in `cmd/api`, `services/api`, and `internal/`.
-- Dependency-free JS app in `apps/web`.
-- Shared JS package in `packages/shared`.
+- Dependency-free TypeScript web app in `apps/web`.
+- Dependency-free TypeScript H5 app in `apps/h5`.
+- Shared TypeScript package in `packages/shared`.
 
 Keep what you need and remove the rest. If you introduce another language, add:
 
@@ -85,3 +86,17 @@ Then check:
 - `tools/template/check-business-leaks.py` passes.
 - GitHub repo visibility is public.
 - Branch protection is configured after initial push.
+
+## One-Command Creation
+
+Downstream users can create a new product repository with:
+
+```bash
+pnpm create:repo -- \
+  --name my-product \
+  --module github.com/acme/my-product \
+  --target ../my-product
+```
+
+The CLI is implemented in `tools/create-repo/src/main.ts` and covered by
+`tools/create-repo/test/create-repo.test.ts`.

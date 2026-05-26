@@ -7,7 +7,9 @@ load them through `scripts/with-env.sh` and then apply local-only overrides.
 
 | File | Purpose |
 |---|---|
-| `backend.local.env` | Local API runtime defaults |
+| `backend.local.env` | Local public API runtime defaults |
+| `admin-api.local.env` | Local admin API runtime defaults |
+| `worker.local.env` | Local worker runtime defaults |
 | `backend.test.env` | Go test defaults |
 | `web.local.env` | Local web rendering defaults |
 

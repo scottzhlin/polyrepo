@@ -6,7 +6,8 @@ Document user-facing pages before implementing substantial UI changes.
 
 | Page | Purpose | Source |
 |---|---|---|
-| Starter home | Shows repository identity and shared payload | `apps/web/src/main.js` |
+| Starter web home | Shows repository identity and shared payload | `apps/web/src/main.ts` |
+| Starter H5 home | Shows mobile/H5 repository identity and shared payload | `apps/h5/src/main.ts` |
 
 ## Page Spec Format
 

@@ -22,6 +22,6 @@ You run tests, analyze failures, and make minimal fixes.
 ```bash
 make test
 make go-test
-make js-test
+make ts-test
 make docs-check
 ```

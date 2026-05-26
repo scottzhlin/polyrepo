@@ -1,10 +1,10 @@
 {
-  "name": "@starter/web",
+  "name": "@starter/h5",
   "version": "0.1.0",
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "node src/main.ts > ../../.dev/web/index.html",
+    "build": "node src/main.ts > ../../.dev/h5/index.html",
     "test": "node --test test/*.test.ts"
   }
 }

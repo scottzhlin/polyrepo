@@ -34,6 +34,7 @@ TERM_CODES = (
     (84, 101, 110, 99, 101, 110, 116, 32, 67, 79, 83),
 )
 BANNED_TERMS = tuple("".join(chr(code) for code in codes) for codes in TERM_CODES)
+DISALLOWED_CODE_SUFFIXES = {".cjs", ".js", ".jsx", ".mjs"}
 
 
 def should_skip(path: Path) -> bool:
@@ -50,6 +51,9 @@ def main() -> int:
     findings: list[str] = []
     for path in ROOT.rglob("*"):
         if not path.is_file() or should_skip(path):
+            continue
+        if path.suffix.lower() in DISALLOWED_CODE_SUFFIXES:
+            findings.append(f"{path.relative_to(ROOT)} uses a non-TypeScript script extension; use .ts instead")
             continue
         try:
             text = path.read_text(encoding="utf-8")

@@ -19,4 +19,4 @@ Use mock data as a contract preview, not as throwaway filler.
 }
 ```
 
-The example fixture mirrors `packages/shared/src/index.js`.
+The example fixture mirrors `packages/shared/src/index.ts`.

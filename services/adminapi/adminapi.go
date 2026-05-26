@@ -1,4 +1,4 @@
-package api
+package adminapi
 
 import (
 	"encoding/json"
@@ -8,24 +8,25 @@ import (
 	"github.com/your-org/ai-coding-polyglot-monorepo-template/internal/buildinfo"
 )
 
-// Config contains runtime settings needed by the HTTP assembly layer.
+// Config contains runtime settings for the admin HTTP service.
 type Config struct {
 	ServiceName string
 }
 
-// NewHandler returns the public HTTP surface for the service.
+// NewHandler returns the admin service HTTP surface.
 func NewHandler(cfg Config) http.Handler {
 	if cfg.ServiceName == "" {
-		cfg.ServiceName = "ai-coding-polyglot-monorepo-template"
+		cfg.ServiceName = "admin-api"
 	}
 
 	mux := http.NewServeMux()
-	mux.HandleFunc("GET /healthz", func(w http.ResponseWriter, r *http.Request) {
-		writeJSON(w, http.StatusOK, map[string]string{"status": "ok"})
+	mux.HandleFunc("GET /admin/healthz", func(w http.ResponseWriter, r *http.Request) {
+		writeJSON(w, http.StatusOK, map[string]string{"status": "ok", "surface": "admin"})
 	})
-	mux.HandleFunc("GET /v1/meta", func(w http.ResponseWriter, r *http.Request) {
+	mux.HandleFunc("GET /admin/v1/meta", func(w http.ResponseWriter, r *http.Request) {
 		writeJSON(w, http.StatusOK, map[string]string{
 			"service": cfg.ServiceName,
+			"surface": "admin",
 			"version": buildinfo.Version,
 			"time":    time.Now().UTC().Format(time.RFC3339),
 		})

@@ -21,9 +21,10 @@ runtime conventions.
 
 ## Decision
 
-Use a minimal polyglot starter with a Go API sample, dependency-free JS app,
-source-of-truth docs, root Makefile, agent entry files, and CI that runs the
-same local gate as contributors.
+Use a minimal polyglot starter with multiple Go backend services, TypeScript web
+and H5 app samples, source-of-truth docs, root Makefile, agent entry files, a
+one-command repository creation CLI, and CI that runs the same local gate as
+contributors.
 
 ## Consequences
 

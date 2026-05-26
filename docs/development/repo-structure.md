@@ -3,7 +3,7 @@
 ## Top Level
 
 ```text
-agentic-polyglot-starter/
+ai-coding-polyglot-monorepo-template/
 ├── apps/                 # User-facing applications
 ├── cmd/                  # Executable entry points
 ├── services/             # Transport and service assembly
@@ -31,7 +31,23 @@ Current scoped rules:
 | Path | Purpose |
 |---|---|
 | `services/api/AGENTS.md` | Go HTTP service constraints |
+| `services/adminapi/AGENTS.md` | Admin Go HTTP service constraints |
 | `docs/AGENTS.md` | Documentation maintenance rules |
+
+## Included Samples
+
+| Path | Purpose |
+|---|---|
+| `apps/web/` | Desktop web TypeScript example |
+| `apps/h5/` | Mobile/H5 TypeScript example |
+| `packages/shared/` | Shared TypeScript utilities |
+| `cmd/api/` | Public API executable |
+| `cmd/admin-api/` | Admin API executable |
+| `cmd/worker/` | Background worker executable |
+| `services/api/` | Public HTTP service assembly |
+| `services/adminapi/` | Admin HTTP service assembly |
+| `internal/worker/` | Worker implementation sample |
+| `tools/create-repo/` | One-command repository creation CLI |
 
 ## File Ownership Principles
 

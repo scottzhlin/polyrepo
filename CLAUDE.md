@@ -1,4 +1,4 @@
-# Agentic Polyglot Starter - Claude Code Rules
+# AI Coding Polyglot Monorepo Template - Claude Code Rules
 
 Purpose: this file is the primary entry point for Claude Code. `AGENTS.md` mirrors the same rules for Codex-style coding agents. Keep both files aligned.
 
@@ -10,7 +10,7 @@ Last updated: 2026-05-26
 |---|---|
 | Repository | Public starter template for AI coding friendly polyglot monorepos |
 | Core idea | Keep source-of-truth docs, clear directory ownership, small quality gates, and agent instructions close to code |
-| Runtime samples | Minimal Go HTTP API and dependency-free JS web renderer |
+| Runtime samples | Public Go API, admin Go API, worker service, TypeScript web app, TypeScript H5 app |
 | Package shape | pnpm workspace plus root Go module |
 | Business domain | Intentionally absent. Product-specific behavior belongs in downstream repositories |
 
@@ -62,12 +62,16 @@ Avoid:
 |---|---|
 | `make install` | Install workspace dependencies |
 | `make api` | Run the sample Go API |
+| `make admin-api` | Run the sample admin Go API |
+| `make worker` | Run the sample worker |
 | `make web-build` | Render the sample web app |
+| `make h5-build` | Render the sample H5 app |
 | `make go-test` | Run Go tests and vet |
-| `make js-test` | Run Node tests |
+| `make ts-test` | Run TypeScript tests |
 | `make docs-check` | Validate Markdown relative links |
 | `make template-check` | Scan for source business terms |
 | `make test` | Full repository gate |
+| `make create-repo-help` | Show one-command repository creation usage |
 
 If a command cannot run in the current environment, report the exact command and reason.
 
