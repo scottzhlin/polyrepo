@@ -10,12 +10,12 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/your-org/ai-coding-polyglot-monorepo-template/services/api"
+	"github.com/your-org/polyrepo/services/api"
 )
 
 func main() {
 	addr := getenv("HTTP_ADDR", ":8080")
-	serviceName := getenv("SERVICE_NAME", "ai-coding-polyglot-monorepo-template")
+	serviceName := getenv("SERVICE_NAME", "polyrepo")
 
 	server := &http.Server{
 		Addr:              addr,

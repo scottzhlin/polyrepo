@@ -1,4 +1,4 @@
-# AI Coding Polyglot Monorepo Template - Agent Rules
+# Polyrepo - Agent Rules
 
 Purpose: this file is the primary entry point for Codex-style coding agents. `CLAUDE.md` mirrors the same rules for Claude Code. Keep both files aligned.
 

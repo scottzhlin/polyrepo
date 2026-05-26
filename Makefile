@@ -1,4 +1,4 @@
-# AI Coding Polyglot Monorepo Template local entry points.
+# Polyrepo local entry points.
 
 .DEFAULT_GOAL := test
 
@@ -17,7 +17,7 @@ RESET := \033[0m
 
 help:
 	@echo ""
-	@echo "$(GREEN)AI Coding Polyglot Monorepo Template commands$(RESET)"
+	@echo "$(GREEN)Polyrepo commands$(RESET)"
 	@echo ""
 	@echo "  $(YELLOW)Quality$(RESET)"
 	@echo "    make test              Full gate: Go, TypeScript, docs, template scan"

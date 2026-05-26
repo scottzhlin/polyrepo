@@ -3,7 +3,7 @@
 ## Top Level
 
 ```text
-ai-coding-polyglot-monorepo-template/
+polyrepo/
 ├── apps/                 # User-facing applications
 ├── cmd/                  # Executable entry points
 ├── services/             # Transport and service assembly

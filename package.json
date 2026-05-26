@@ -1,5 +1,5 @@
 {
-  "name": "ai-coding-polyglot-monorepo-template",
+  "name": "polyrepo",
   "version": "0.1.0",
   "private": true,
   "description": "AI coding friendly polyglot monorepo template for Go and TypeScript teams",

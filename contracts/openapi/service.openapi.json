@@ -1,7 +1,7 @@
 {
   "openapi": "3.1.0",
   "info": {
-    "title": "AI Coding Polyglot Monorepo Template API",
+    "title": "Polyrepo API",
     "version": "0.1.0"
   },
   "paths": {

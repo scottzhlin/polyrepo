@@ -10,7 +10,7 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/your-org/ai-coding-polyglot-monorepo-template/services/adminapi"
+	"github.com/your-org/polyrepo/services/adminapi"
 )
 
 func main() {

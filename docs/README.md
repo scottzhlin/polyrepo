@@ -30,7 +30,7 @@ Backend work:
 1. [../AGENTS.md](../AGENTS.md)
 2. [../contracts/README.md](../contracts/README.md)
 3. [development/dev-flow.md](development/dev-flow.md)
-4. [decisions/0001-ai-coding-polyglot-monorepo-template.md](decisions/0001-ai-coding-polyglot-monorepo-template.md)
+4. [decisions/0001-polyrepo-template.md](decisions/0001-polyrepo-template.md)
 
 Frontend or app work:
 

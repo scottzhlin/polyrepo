@@ -5,7 +5,7 @@ import (
 	"log/slog"
 	"os"
 
-	"github.com/your-org/ai-coding-polyglot-monorepo-template/internal/worker"
+	"github.com/your-org/polyrepo/internal/worker"
 )
 
 func main() {

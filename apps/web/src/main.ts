@@ -1,7 +1,7 @@
 import { createPlatformPayload, escapeHTML } from "../../../packages/shared/src/index.ts";
 
 export function renderWebApp(options: { appName?: string } = {}): string {
-  const appName = options.appName || process.env.PUBLIC_APP_NAME || "AI Coding Polyglot Monorepo Template";
+  const appName = options.appName || process.env.PUBLIC_APP_NAME || "Polyrepo";
   const payload = createPlatformPayload("web", "desktop web shell");
 
   return `<!doctype html>

@@ -18,9 +18,9 @@ test("buildReplacementPlan includes repository, title, module, and description r
     description: "My product monorepo",
   });
 
-  assert.equal(plan.get("ai-coding-polyglot-monorepo-template"), "my-product");
-  assert.equal(plan.get("AI Coding Polyglot Monorepo Template"), "My Product");
-  assert.equal(plan.get("github.com/your-org/ai-coding-polyglot-monorepo-template"), "github.com/acme/my-product");
+  assert.equal(plan.get("polyrepo"), "my-product");
+  assert.equal(plan.get("Polyrepo"), "My Product");
+  assert.equal(plan.get("github.com/your-org/polyrepo"), "github.com/acme/my-product");
   assert.equal(plan.get("@starter/"), "@my-product/");
   assert.equal(plan.get("AI coding friendly polyglot monorepo template for Go and TypeScript teams"), "My product monorepo");
 });
@@ -31,8 +31,8 @@ test("createRepositoryFromTemplate copies files, skips local artifacts, and rewr
   const targetDir = join(root, "target");
 
   await mkdir(join(templateDir, ".dev"), { recursive: true });
-  await writeFile(join(templateDir, "README.md"), "# AI Coding Polyglot Monorepo Template\nai-coding-polyglot-monorepo-template\n");
-  await writeFile(join(templateDir, "go.mod"), "module github.com/your-org/ai-coding-polyglot-monorepo-template\n");
+  await writeFile(join(templateDir, "README.md"), "# Polyrepo\npolyrepo\n");
+  await writeFile(join(templateDir, "go.mod"), "module github.com/your-org/polyrepo\n");
   await writeFile(join(templateDir, ".dev", "ignored.txt"), "ignore me");
 
   const result = await createRepositoryFromTemplate({

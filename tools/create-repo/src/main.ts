@@ -67,9 +67,9 @@ export function normalizeRepoName(input: string): string {
 export function buildReplacementPlan(options: CreateRepoOptions): Map<string, string> {
   const normalizedName = normalizeRepoName(options.name);
   return new Map([
-    ["github.com/your-org/ai-coding-polyglot-monorepo-template", options.modulePath],
-    ["AI Coding Polyglot Monorepo Template", toTitle(normalizedName)],
-    ["ai-coding-polyglot-monorepo-template", normalizedName],
+    ["github.com/your-org/polyrepo", options.modulePath],
+    ["Polyrepo", toTitle(normalizedName)],
+    ["polyrepo", normalizedName],
     ["@starter/", `@${normalizedName}/`],
     [
       "AI coding friendly polyglot monorepo template for Go and TypeScript teams",
@@ -210,7 +210,7 @@ export function parseCreateRepoArgs(argv: string[]): CreateRepositoryOptions | "
 }
 
 function printHelp(): void {
-  console.log(`create-ai-coding-polyglot-repo
+  console.log(`create-polyrepo
 
 Create a product repository from this AI coding friendly polyglot monorepo template.
 

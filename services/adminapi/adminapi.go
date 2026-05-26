@@ -5,7 +5,7 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/your-org/ai-coding-polyglot-monorepo-template/internal/buildinfo"
+	"github.com/your-org/polyrepo/internal/buildinfo"
 )
 
 // Config contains runtime settings for the admin HTTP service.

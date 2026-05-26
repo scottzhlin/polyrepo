@@ -5,7 +5,7 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/your-org/ai-coding-polyglot-monorepo-template/internal/buildinfo"
+	"github.com/your-org/polyrepo/internal/buildinfo"
 )
 
 // Config contains runtime settings needed by the HTTP assembly layer.
@@ -16,7 +16,7 @@ type Config struct {
 // NewHandler returns the public HTTP surface for the service.
 func NewHandler(cfg Config) http.Handler {
 	if cfg.ServiceName == "" {
-		cfg.ServiceName = "ai-coding-polyglot-monorepo-template"
+		cfg.ServiceName = "polyrepo"
 	}
 
 	mux := http.NewServeMux()

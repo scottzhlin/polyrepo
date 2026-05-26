@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "bin": {
-    "create-ai-coding-polyglot-repo": "./src/main.ts"
+    "create-polyrepo": "./src/main.ts"
   },
   "scripts": {
     "test": "node --test test/*.test.ts"

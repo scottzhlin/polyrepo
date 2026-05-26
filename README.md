@@ -1,4 +1,4 @@
-# AI Coding Polyglot Monorepo Template
+# Polyrepo
 
 An AI coding friendly polyglot monorepo template for teams that want Codex, Claude Code, and human engineers to work from the same source of truth.
 
