@@ -72,8 +72,8 @@ export function buildReplacementPlan(options: CreateRepoOptions): Map<string, st
     ["polyrepo", normalizedName],
     ["@starter/", `@${normalizedName}/`],
     [
-      "AI coding friendly polyglot monorepo template for Go and TypeScript teams",
-      options.description || "AI coding friendly polyglot monorepo",
+      "AI coding friendly full-stack monorepo template for unified frontend and backend teams",
+      options.description || "AI coding friendly frontend-backend monorepo",
     ],
   ]);
 }
@@ -212,7 +212,7 @@ export function parseCreateRepoArgs(argv: string[]): CreateRepositoryOptions | "
 function printHelp(): void {
   console.log(`create-polyrepo
 
-Create a product repository from this AI coding friendly polyglot monorepo template.
+Create a product repository from this AI coding friendly frontend-backend monorepo template.
 
 Usage:
   pnpm create:repo -- --name my-product --module github.com/acme/my-product --target ../my-product

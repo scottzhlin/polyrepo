@@ -38,9 +38,9 @@ Current scoped rules:
 
 | Path | Purpose |
 |---|---|
-| `apps/web/` | Desktop web TypeScript example |
-| `apps/h5/` | Mobile/H5 TypeScript example |
-| `packages/shared/` | Shared TypeScript utilities |
+| `apps/web/` | Desktop web frontend example |
+| `apps/h5/` | Mobile/H5 frontend example |
+| `packages/shared/` | Shared frontend utilities |
 | `cmd/api/` | Public API executable |
 | `cmd/admin-api/` | Admin API executable |
 | `cmd/worker/` | Background worker executable |

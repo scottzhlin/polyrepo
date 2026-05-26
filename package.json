@@ -2,7 +2,7 @@
   "name": "polyrepo",
   "version": "0.1.0",
   "private": true,
-  "description": "AI coding friendly polyglot monorepo template for Go and TypeScript teams",
+  "description": "AI coding friendly full-stack monorepo template for unified frontend and backend teams",
   "type": "module",
   "scripts": {
     "test": "node --test packages/*/test/*.test.ts apps/*/test/*.test.ts tools/*/test/*.test.ts",

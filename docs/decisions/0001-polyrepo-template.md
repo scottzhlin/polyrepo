@@ -21,9 +21,9 @@ runtime conventions.
 
 ## Decision
 
-Use a minimal polyglot starter with multiple Go backend services, TypeScript web
-and H5 app samples, source-of-truth docs, root Makefile, agent entry files, a
-one-command repository creation CLI, and CI that runs the same local gate as
+Use a minimal frontend-backend unified starter with multiple backend services,
+web and H5 app samples, source-of-truth docs, root Makefile, agent entry files,
+a one-command repository creation CLI, and CI that runs the same local gate as
 contributors.
 
 ## Consequences

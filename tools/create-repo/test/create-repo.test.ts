@@ -22,7 +22,7 @@ test("buildReplacementPlan includes repository, title, module, and description r
   assert.equal(plan.get("Polyrepo"), "My Product");
   assert.equal(plan.get("github.com/your-org/polyrepo"), "github.com/acme/my-product");
   assert.equal(plan.get("@starter/"), "@my-product/");
-  assert.equal(plan.get("AI coding friendly polyglot monorepo template for Go and TypeScript teams"), "My product monorepo");
+  assert.equal(plan.get("AI coding friendly full-stack monorepo template for unified frontend and backend teams"), "My product monorepo");
 });
 
 test("createRepositoryFromTemplate copies files, skips local artifacts, and rewrites starter identity", async () => {

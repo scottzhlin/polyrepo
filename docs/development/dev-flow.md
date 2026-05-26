@@ -17,7 +17,7 @@ follow:
 |---|---|
 | Full local gate | `make test` |
 | Go-only work | `make go-test` |
-| TypeScript-only work | `make ts-test` |
+| Frontend/package-only work | `make ts-test` |
 | Docs-only work | `make docs-check` |
 | Template hygiene | `make template-check` |
 | Run sample API | `make api` |
@@ -57,7 +57,7 @@ When changing an API shape:
 
 ## One-Command Repository Creation
 
-The template ships with a TypeScript CLI:
+The template ships with a repository creation CLI:
 
 ```bash
 pnpm create:repo -- \

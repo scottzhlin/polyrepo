@@ -8,9 +8,9 @@ Last updated: 2026-05-26
 
 | Item | Current state |
 |---|---|
-| Repository | Public starter template for AI coding friendly polyglot monorepos |
+| Repository | Public starter template for AI coding friendly frontend-backend monorepos |
 | Core idea | Keep source-of-truth docs, clear directory ownership, small quality gates, and agent instructions close to code |
-| Runtime samples | Public Go API, admin Go API, worker service, TypeScript web app, TypeScript H5 app |
+| Runtime samples | Public API, admin API, worker service, web app, H5 app |
 | Package shape | pnpm workspace plus root Go module |
 | Business domain | Intentionally absent. Product-specific behavior belongs in downstream repositories |
 

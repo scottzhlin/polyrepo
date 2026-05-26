@@ -8,9 +8,9 @@ Last updated: 2026-05-26
 
 | Item | Current state |
 |---|---|
-| Repository | Public starter template for AI coding friendly polyglot monorepos |
+| Repository | Public starter template for AI coding friendly frontend-backend monorepos |
 | Core idea | Keep source-of-truth docs, clear directory ownership, small quality gates, and agent instructions close to code |
-| Runtime samples | Public Go API, admin Go API, worker service, TypeScript web app, TypeScript H5 app |
+| Runtime samples | Public API, admin API, worker service, web app, H5 app |
 | Package shape | pnpm workspace plus root Go module |
 | Business domain | Intentionally absent. Product-specific behavior belongs in downstream repositories |
 
@@ -79,8 +79,8 @@ If a command cannot run in the current environment, report the exact command and
 
 | Role | Scope | Use when |
 |---|---|---|
-| `app-dev` | `apps/`, `packages/` | Frontend or shared TypeScript changes |
-| `backend-dev` | `cmd/`, `services/`, `internal/`, `contracts/` | API, service, or Go changes |
+| `app-dev` | `apps/`, `packages/` | Frontend app or shared package changes |
+| `backend-dev` | `cmd/`, `services/`, `internal/`, `contracts/` | Backend API, service, worker, or contract changes |
 | `docs-maintainer` | `docs/`, `AGENTS.md`, `CLAUDE.md` | Source-of-truth or template docs changes |
 | `tester` | Tests and failing gates | A test fails or coverage is missing |
 | `code-reviewer` | Read-only review | Before a PR or release |
