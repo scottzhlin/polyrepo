@@ -4,10 +4,10 @@
 
 ```text
 polyrepo/
-├── apps/                 # User-facing applications
-├── cmd/                  # Executable entry points
-├── services/             # Transport and service assembly
-├── internal/             # Private implementation packages
+├── apps/                 # Frontend surfaces: web, h5, miniapp
+├── cmd/                  # Backend executable entry points
+├── services/             # Backend transport and service assembly
+├── internal/             # Private backend implementation packages
 ├── packages/             # Shared libraries
 ├── contracts/            # API, event, and schema contracts
 ├── docs/                 # Source-of-truth documentation
@@ -40,6 +40,7 @@ Current scoped rules:
 |---|---|
 | `apps/web/` | Desktop web frontend example |
 | `apps/h5/` | Mobile/H5 frontend example |
+| `apps/miniapp/` | Mini program frontend example |
 | `packages/shared/` | Shared frontend utilities |
 | `cmd/api/` | Public API executable |
 | `cmd/admin-api/` | Admin API executable |

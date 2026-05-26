@@ -1,4 +1,4 @@
-export type Platform = "web" | "h5";
+export type Platform = "web" | "h5" | "miniapp";
 
 export type PlatformPayload = {
   platform: Platform;
@@ -18,8 +18,8 @@ export function createHealthPayload(serviceName: string): { service: string; sta
 }
 
 export function createPlatformPayload(platform: Platform, service: string): PlatformPayload {
-  if (platform !== "web" && platform !== "h5") {
-    throw new TypeError("platform must be web or h5");
+  if (platform !== "web" && platform !== "h5" && platform !== "miniapp") {
+    throw new TypeError("platform must be web, h5, or miniapp");
   }
 
   return {

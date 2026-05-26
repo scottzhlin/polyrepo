@@ -3,7 +3,7 @@
 .DEFAULT_GOAL := test
 
 GENERAL_TARGETS := help install test lint build clean docs-check template-check create-repo-help
-APP_TARGETS := api admin-api worker web-build h5-build
+APP_TARGETS := api admin-api worker web-build h5-build miniapp-build
 GO_TARGETS := go-test
 TS_TARGETS := ts-test
 .PHONY: $(GENERAL_TARGETS) $(APP_TARGETS) $(GO_TARGETS) $(TS_TARGETS)
@@ -32,6 +32,7 @@ help:
 	@echo "    make worker            Run the sample background worker"
 	@echo "    make web-build         Render sample web HTML into .dev/web/index.html"
 	@echo "    make h5-build          Render sample H5 HTML into .dev/h5/index.html"
+	@echo "    make miniapp-build     Render sample miniapp config into .dev/miniapp/app.config.json"
 	@echo "    make create-repo-help  Show one-command repository creation help"
 	@echo ""
 
@@ -56,6 +57,7 @@ build:
 	@$(GO_ENV) go build -o .dev/bin/worker ./cmd/worker
 	@$(MAKE) web-build
 	@$(MAKE) h5-build
+	@$(MAKE) miniapp-build
 
 clean:
 	@rm -rf .dev
@@ -96,6 +98,11 @@ h5-build:
 	@mkdir -p .dev/h5
 	@node apps/h5/src/main.ts > .dev/h5/index.html
 	@echo "$(GREEN)Wrote .dev/h5/index.html$(RESET)"
+
+miniapp-build:
+	@mkdir -p .dev/miniapp
+	@node apps/miniapp/src/main.ts > .dev/miniapp/app.config.json
+	@echo "$(GREEN)Wrote .dev/miniapp/app.config.json$(RESET)"
 
 create-repo-help:
 	@node tools/create-repo/src/main.ts --help

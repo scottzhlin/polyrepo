@@ -1,0 +1,10 @@
+{
+  "name": "@starter/miniapp",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node src/main.ts > ../../.dev/miniapp/app.config.json",
+    "test": "node --test test/*.test.ts"
+  }
+}

@@ -2,7 +2,7 @@
 
 An AI coding friendly full-stack monorepo template for teams that want frontend, backend, agents, and humans to work from one source of truth.
 
-Use this repository when you want a ready-to-fork frontend-backend unified repository: multiple backend services, web and H5 apps, shared packages, API contracts, source-of-truth docs, local quality gates, and AI agent instructions.
+Use this repository when you want a ready-to-fork frontend-backend unified repository: multiple backend services, web, H5 and miniapp frontends, shared packages, API contracts, source-of-truth docs, local quality gates, and AI agent instructions.
 
 Search keywords: `AI coding template`, `Codex monorepo`, `Claude Code monorepo`, `full-stack monorepo`, `frontend backend monorepo`, `polyglot monorepo template`, `agentic software engineering`.
 
@@ -14,7 +14,7 @@ Search keywords: `AI coding template`, `Codex monorepo`, `Claude Code monorepo`,
 | AI guidance | `AGENTS.md`, `CLAUDE.md`, scoped `AGENTS.md`, generic Claude sub-agent definitions |
 | Quality gates | `Makefile`, backend tests, frontend tests, docs link checker, business-leak scanner |
 | Documentation | PRD, roadmap, ADR, development flow, git workflow, design docs, bug workflow |
-| Runtime samples | Public API, admin API, worker service, web app, H5 app |
+| Runtime samples | Public API, admin API, worker service, web app, H5 app, miniapp shell |
 | CI | GitHub Actions workflow that runs the same local gate as `make test` |
 | Creation tool | CLI that copies the template, rewrites identity, and optionally runs `git init` |
 
@@ -39,9 +39,10 @@ Render the sample frontend apps:
 ```bash
 make web-build
 make h5-build
+make miniapp-build
 ```
 
-Rendered files are written to `.dev/web/index.html` and `.dev/h5/index.html`.
+Rendered files are written to `.dev/web/index.html`, `.dev/h5/index.html`, and `.dev/miniapp/app.config.json`.
 
 ## One-Command Repository Creation
 
@@ -86,29 +87,48 @@ See [docs/template-guide.md](docs/template-guide.md) for the full adoption check
 | `make worker` | Run the sample background worker |
 | `make web-build` | Render the sample web app to `.dev/web/index.html` |
 | `make h5-build` | Render the sample H5 app to `.dev/h5/index.html` |
+| `make miniapp-build` | Render the sample miniapp config to `.dev/miniapp/app.config.json` |
 | `make create-repo-help` | Show one-command repository creation usage |
 
 ## Repository Map
 
 ```text
 .
-├── apps/web/              # Example desktop web app
-├── apps/h5/               # Example mobile/H5 app
-├── cmd/api/               # Public Go API entry point
-├── cmd/admin-api/         # Admin Go API entry point
-├── cmd/worker/            # Background worker entry point
-├── services/api/          # Public Go HTTP service assembly
-├── services/adminapi/     # Admin Go HTTP service assembly
-├── internal/              # Private Go packages
-├── packages/shared/       # Shared frontend package
-├── contracts/             # API and data contracts
-├── docs/                  # Source-of-truth docs
-├── tools/                 # Repository tooling, including create-repo
-├── scripts/               # Shell helpers used by Makefile
-├── .claude/agents/        # Generic Claude Code sub-agent definitions
-├── .agents/               # Generic agent workflows mirrored for Codex-style agents
-├── AGENTS.md              # Codex-style agent entry point
-└── CLAUDE.md              # Claude Code entry point
+├── apps/                         # Frontend surfaces
+│   ├── web/                      # Desktop web app shell
+│   ├── h5/                       # Mobile/H5 app shell
+│   └── miniapp/                  # Mini program app shell
+├── cmd/                          # Backend executable entry points
+│   ├── api/                      # Public API executable
+│   ├── admin-api/                # Admin API executable
+│   └── worker/                   # Background worker executable
+├── services/                     # Backend transport and service assembly
+│   ├── api/                      # Public HTTP service assembly
+│   └── adminapi/                 # Admin HTTP service assembly
+├── internal/                     # Private backend implementation packages
+│   ├── buildinfo/                # Shared backend build metadata
+│   └── worker/                   # Worker implementation sample
+├── packages/
+│   └── shared/                   # Shared frontend/package utilities
+├── contracts/
+│   ├── openapi/                  # HTTP API contracts
+│   └── schemas/                  # Data and event schema notes
+├── docs/
+│   ├── requirements/             # PRD and roadmap
+│   ├── design/                   # IA, pages, UI conventions, mock data
+│   ├── decisions/                # ADRs
+│   ├── development/              # Repo, dev, and git workflows
+│   └── bugs/                     # Bug records and verification notes
+├── tools/
+│   ├── create-repo/              # One-command downstream repo creation
+│   ├── docs/                     # Documentation checks
+│   └── template/                 # Template hygiene checks
+├── scripts/                      # Shell helpers used by Makefile
+├── .github/                      # CI and GitHub templates
+├── .claude/agents/               # Claude Code sub-agent definitions
+├── .agents/                      # Portable agent workflows
+├── AGENTS.md                     # Codex-style agent entry point
+└── CLAUDE.md                     # Claude Code entry point
 ```
 
 ## License

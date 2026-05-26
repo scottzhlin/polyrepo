@@ -8,6 +8,7 @@
     "test": "node --test packages/*/test/*.test.ts apps/*/test/*.test.ts tools/*/test/*.test.ts",
     "build:web": "node apps/web/src/main.ts > .dev/web/index.html",
     "build:h5": "node apps/h5/src/main.ts > .dev/h5/index.html",
+    "build:miniapp": "node apps/miniapp/src/main.ts > .dev/miniapp/app.config.json",
     "create:repo": "node tools/create-repo/src/main.ts",
     "docs:check": "python3 tools/docs/check-markdown-links.py",
     "template:check": "python3 tools/template/check-business-leaks.py"

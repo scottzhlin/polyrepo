@@ -22,6 +22,14 @@ test("createPlatformPayload identifies web and h5 targets", () => {
   });
 });
 
+test("createPlatformPayload supports miniapp targets", () => {
+  assert.deepEqual(createPlatformPayload("miniapp", "mini program shell"), {
+    platform: "miniapp",
+    service: "mini program shell",
+    status: "ok",
+  });
+});
+
 test("escapeHTML escapes common HTML-sensitive characters", () => {
   assert.equal(escapeHTML('<span title="x&y">'), "&lt;span title=&quot;x&amp;y&quot;&gt;");
 });

@@ -8,6 +8,7 @@ Use this file to describe navigation, major surfaces, and workflow ownership.
 |---|---|---|
 | Web app | Example rendered desktop web app | `apps/web` |
 | H5 app | Example rendered mobile/H5 app | `apps/h5` |
+| Miniapp | Example mini program app shell | `apps/miniapp` |
 | API | Example HTTP surface | `services/api` |
 | Admin API | Example admin HTTP surface | `services/adminapi` |
 

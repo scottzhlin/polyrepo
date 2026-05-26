@@ -29,6 +29,7 @@ The starter ships with:
 - Go API in `cmd/api`, `services/api`, and `internal/`.
 - Dependency-free web frontend app in `apps/web`.
 - Dependency-free mobile/H5 frontend app in `apps/h5`.
+- Dependency-free mini program frontend shell in `apps/miniapp`.
 - Shared frontend package in `packages/shared`.
 
 Keep what you need and remove the rest. If you introduce another language, add:
