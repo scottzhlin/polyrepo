@@ -1,10 +1,8 @@
 # Polyrepo
 
-An AI coding friendly full-stack monorepo template for teams that want frontend, backend, agents, and humans to work from one source of truth.
+Polyrepo is an AI coding friendly full-stack monorepo template for teams that want frontend, backend, agents, and humans to work from one source of truth.
 
-Use this repository when you want a ready-to-fork frontend-backend unified repository: multiple backend services, web, H5 and miniapp frontends, shared packages, API contracts, source-of-truth docs, local quality gates, and AI agent instructions.
-
-Search keywords: `AI coding template`, `Codex monorepo`, `Claude Code monorepo`, `full-stack monorepo`, `frontend backend monorepo`, `polyglot monorepo template`, `agentic software engineering`.
+Use it when you want a ready-to-fork frontend-backend unified repository: multiple backend services, web, H5 and miniapp frontends, shared packages, API contracts, source-of-truth docs, local quality gates, and AI agent instructions.
 
 ## What This Includes
 
