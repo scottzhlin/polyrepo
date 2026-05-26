@@ -1,0 +1,60 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Build outputs
+dist/
+build/
+.output/
+.dev/
+
+# Environment
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+
+# Logs
+*.log
+logs/
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Go
+*.exe
+*.test
+*.prof
+vendor/
+
+# Java / Kotlin
+*.class
+*.jar
+*.war
+target/
+.gradle/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+
+# Infra
+infra/**/*.tfstate
+infra/**/*.tfstate.backup
+infra/.terraform/
+
+# AI tooling session artifacts and local worktrees
+.claude/worktrees/
+.codex/
+.worktrees/

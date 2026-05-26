@@ -1,0 +1,53 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Agentic Polyglot Starter API",
+    "version": "0.1.0"
+  },
+  "paths": {
+    "/healthz": {
+      "get": {
+        "summary": "Health check",
+        "responses": {
+          "200": {
+            "description": "Service is healthy",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": ["status"],
+                  "properties": {
+                    "status": { "type": "string", "const": "ok" }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/meta": {
+      "get": {
+        "summary": "Service metadata",
+        "responses": {
+          "200": {
+            "description": "Service metadata",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": ["service", "version", "time"],
+                  "properties": {
+                    "service": { "type": "string" },
+                    "version": { "type": "string" },
+                    "time": { "type": "string", "format": "date-time" }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

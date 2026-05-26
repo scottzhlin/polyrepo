@@ -1,0 +1,23 @@
+# Optional local infrastructure for products that need a database.
+# The starter sample does not require this service.
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: agentic-polyglot-starter-postgres
+    environment:
+      POSTGRES_DB: starter
+      POSTGRES_USER: starter
+      POSTGRES_PASSWORD: starter_dev
+    ports:
+      - "15432:5432"
+    volumes:
+      - starter_postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U starter -d starter"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+volumes:
+  starter_postgres_data:
